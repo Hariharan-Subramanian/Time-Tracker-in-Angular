@@ -1,0 +1,42 @@
+ <!-- Login View -->
+       <div class="row">
+          <div class="col-sm-4 col-md-4 "></div>
+          <div class="col-sm-4 col-md-4 col-xs-12">
+            <div class="panel panel-primary">
+              <div class="panel-heading">User Login</div>
+                <div class="panel-body">
+                <form required name="loginForm">
+                  <div class="form-group has-feedback" ng-class=" (loginForm.username.$dirty && loginForm.username.$invalid) || isSubmited ? 'has-error' : 'has-success'">
+                    <label for="Username">User Name</label>
+                    <input type="text" class="form-control" ng-model="username" name="username" id="uname" placeholder="User Name" ng-minlength=3 required>
+                    <span style="color:red" ng-show="loginForm.username.$dirty && loginForm.username.$invalid || (isSubmited)">
+                        <span ng-show="loginForm.username.$error.required">Username is required.</span>                        
+                    </span>
+                        <span class="glyphicon form-control-feedback" ng-class="loginForm.username.$dirty && loginForm.username.$invalid || (isSubmited) ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group has-feedback" ng-class=" loginForm.password.$dirty && loginForm.password.$invalid || (isSubmited) ? 'has-error' : 'has-success'">
+                    <label for="Password">Password</label>
+                    <input type="password" class="form-control" name="password" ng-model="password" id="pword" placeholder="Password" ng-minlength=3 required>
+                     <span style="color:red" ng-show="loginForm.password.$dirty && loginForm.password.$invalid || (isSubmited)">
+                        <span ng-show="loginForm.password.$error.required">password is required.</span>
+                     </span>
+                     <span class="glyphicon form-control-feedback" ng-class="loginForm.password.$dirty && loginForm.password.$invalid || (isSubmited) ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                  </div>
+                  <div class="checkbox">
+                    <label for="Remember">
+                      <input type="checkbox">
+                      Remember me
+                    </label>
+                  </div>
+                  <button type="button" class="btn btn-primary btn-md" ng-click="login()">Login </button>
+                  <button type="button" class="btn btn-link btn-md" ng-click="forgot()">Forget Password? </button>
+                  <div class="row">
+                    <button type="button" class="btn btn-link btn-md" ng-click="register()">New User?</button>
+                  </div>
+                  </form>
+                  </div>
+
+              </div>
+             </div>
+          <div class="col-sm-4 col-md-4 "></div>
+       </div>

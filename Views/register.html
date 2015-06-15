@@ -1,0 +1,48 @@
+ <!-- Register View -->
+      <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+          <div class="col-sm-8 col-md-8 col-xs-8">
+            <div class="panel panel-primary">
+              <div class="panel-heading">User Registration</div>
+                <div class="panel-body">
+                <form name="registerForm" required>
+                  <div class="form-group has-feedback" ng-class="registerForm.username.$dirty && registerForm.username.$invalid || isSubmited ? 'has-error' : 'has-success'">
+                    <label for="Username">User Name</label>
+                    <input type="text" class="form-control" ng-model="username" name="username" id="uname" placeholder="User Name" required>
+                    <span style="color:red" ng-show="registerForm.username.$dirty && registerForm.username.$invalid || isSubmited ">
+                        <span ng-show="registerForm.username.$error.required">Username is required.</span>                        
+                    </span>
+                        <span class="glyphicon form-control-feedback" ng-class="registerForm.username.$dirty && registerForm.username.$invalid || isSubmited  ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group has-feedback" ng-class=" registerForm.password.$dirty && registerForm.password.$invalid || isSubmited  ? 'has-error' : 'has-success'">
+                    <label for="Password">Password</label>
+                     <input type="password" class="form-control" name="password" ng-model="password" id="pword" placeholder="Password" required>
+                     <span style="color:red" ng-show="registerForm.password.$dirty && registerForm.password.$invalid || isSubmited ">
+                        <span ng-show="registerForm.password.$error.required">Password is required.</span>                        
+                    </span>
+                        <span class="glyphicon form-control-feedback" ng-class="registerForm.password.$dirty && registerForm.password.$invalid || isSubmited ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group has-feedback" ng-class=" registerForm.Cpassword.$dirty && registerForm.Cpassword.$invalid || isSubmited ? 'has-error' : 'has-success'">
+                    <label for="ConfirmPassword">Confirm Password</label>
+                    <input type="password" class="form-control" id="Cpword" name="Cpassword" ng-model="Cpassword" placeholder="confirm Password" required>
+                    <span style="color:red" ng-show="registerForm.Cpassword.$dirty && registerForm.Cpassword.$invalid || isSubmited ">
+                        <span ng-show="registerForm.Cpassword.$error.required">Confirm Password is required.</span>                        
+                    </span>
+                        <span class="glyphicon form-control-feedback" ng-class="registerForm.Cpassword.$dirty && registerForm.Cpassword.$invalid || isSubmited ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                  </div>
+                  <div class="form-group has-feedback" ng-class=" registerForm.email.$dirty && registerForm.email.$invalid || isSubmited  ? 'has-error' : 'has-success'">
+                    <label for="Email">Email</label>
+                     <input type="email" class="form-control" id="mail" name="email" ng-model="email" placeholder="eample@ex.com" required>
+                     <span style="color:red" ng-show="registerForm.email.$dirty && registerForm.email.$invalid || isSubmited">
+                        <span ng-show="registerForm.email.$error.required">Email is required.</span>                        
+                    </span>
+                        <span class="glyphicon form-control-feedback" ng-class="registerForm.email.$dirty && registerForm.email.$invalid || isSubmited  ? 'glyphicon-remove' : 'glyphicon-ok'" aria-hidden="true"></span>
+                   </div>
+                  <button type="button" class="btn btn-primary btn-md" ng-click="register()">Register</button>
+                  <button type="button" class="btn btn-primary btn-md" ng-click="cancel()">Cancel</button>
+                 </form> 
+                 </div>
+              </div>
+             </div>
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+       </div>

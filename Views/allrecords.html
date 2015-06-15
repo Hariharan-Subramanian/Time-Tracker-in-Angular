@@ -1,0 +1,52 @@
+ <!-- All Records View-->
+      <div id="AllRecords" >
+        <div class="row">
+           <div class="col-sm-3 col-md-3 col-xs-1"></div>
+           <div class="col-sm-6 col-md-6 col-xs-10">
+             <div class="panel panel-primary">
+                <div class="panel-heading">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-6 col-xs-6"><h4 class="text-left">All Records</h4></div>
+                     <div class="col-sm-3 col-md-3" ></div>
+                    <div class="col-sm-3 col-md-3 col-xs-6" >
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">{{selectedMonth}} <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li ng-repeat="monthsaData in months" ng-click="selectMonth()"><a href="javascript:;">{{monthsaData}}</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="panel-body">
+                  <table class="table text-center">
+                    <thead>
+                      <tr>
+                        <th class="text-center">No</th>
+                        <th class="text-center">Date</th>
+                        <th class="text-center">Login Time</th>
+                        <th class="text-center">Calculated Time</th>
+                     </tr>
+                    </thead>
+                    <tbody>
+                      <tr ng-repeat="obj in allRecords | filter: (selectedMonth==='Month'?'':selectedMonth) ">
+                        <td>{{$index+1}}</td>
+                        <td>{{obj.date}}</td>
+                        <td>{{obj.sTime}}</td>
+                        <td>{{obj.pTime}}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+             </div>
+           </div>
+           <div class="col-sm-3 col-md-3 col-xs-1"></div>
+         </div>
+         <div class="row">
+           <div class="col-sm-3 col-md-3 col-xs-1"></div>
+           <div class="col-sm-6 col-md-6 col-xs-10">
+              <button back type="button" class="btn btn-primary btn-lg">Back</button>
+           </div>
+           <div class="col-sm-3 col-md-3 col-xs-1"></div>           
+         </div>
+      </div>

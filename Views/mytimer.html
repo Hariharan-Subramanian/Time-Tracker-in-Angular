@@ -1,0 +1,72 @@
+ <!-- timer view -->
+       <div id="timerView" class="" ng-controller="TimeCtrl as main"> 
+        <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+          <div class="col-sm-5 col-md-5 col-xs-5 m-roll">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                 <h4>Time</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-xs-3 m-roll">
+            <h4 mytimeattr class="timerno m-roll"> </h4>
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+         </div>
+
+          <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+          <div class="col-sm-5 col-md-5 col-xs-5 m-roll" style="-webkit-animation-delay: .4s;animation-delay: .4s;">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                 <h4>Start Time</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-xs-3 m-roll"  style="-webkit-animation-delay: .4s;animation-delay: .4s;">
+            <h4 class="timerno">{{main.startTimeLoc}}</h4>
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+         </div>
+           <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+          <div class="col-sm-5 col-md-5 col-xs-5 m-roll" style="-webkit-animation-delay: .8s;animation-delay: .8s;">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                 <h4>Progress Time</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-xs-3 m-roll" style="-webkit-animation-delay: .8s;animation-delay: .8s;">
+            <h4 progresstimeattr class="timerno"></h4>
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+         </div>
+          <div class="row">
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+          <div class="col-sm-5 col-md-5 col-xs-5 m-roll" style="-webkit-animation-delay: 1.2s;animation-delay: 1.2s;">
+            <div class="panel panel-default">
+              <div class="panel-heading text-center">
+                 <h4>Number of Stops</h4>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-md-3 col-xs-3 m-roll" style="-webkit-animation-delay: 1.2s;animation-delay: 1.2s;">
+            <h4 class="timerno">{{main.noOfStopsLoc}}</h4>
+          </div>
+          <div class="col-sm-2 col-md-2 col-xs-2"></div>
+         </div>
+        
+        <div class="row">
+             <div class="col-sm-2 col-md-2 col-xs-2"></div>
+             <div class="col-sm-9 col-md-9 col-xs-9">
+             <button type="button" class="btn btn-primary btn-lg l-roll" ng-click="timerStart()">Start</button>
+              <button type="button" class="btn btn-primary btn-lg l-roll" ng-click="timerPause()">Pause</button>
+             <button type="button" class="btn btn-primary btn-lg l-roll" ng-click="timerStop()">Stop</button>
+             <button back type="button" class="btn btn-primary btn-lg l-roll">Back</button>
+             </div>
+             <div class="col-sm-1 col-md-1 col-xs-1"></div>
+         </div>
+
+      </div>

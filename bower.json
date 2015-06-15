@@ -1,0 +1,21 @@
+{
+  "name": "FirstTime_Angular",
+  "version": "0.0.0",
+  "authors": [
+    "Haridharan"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularjs": "~1.3.15",
+    "bootstrap": "~3.2.0",
+    "jquery": "~2.1.3",
+    "angular-route": "~1.3.15"
+  }
+}
